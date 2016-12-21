@@ -1,0 +1,46 @@
+---
+# networks
+- type: replace
+  path: /instance_groups/name=mysql/networks/name=default/name
+  value:  private
+- type: replace
+  path: /instance_groups/name=arbitrator/networks/name=default/name
+  value: private
+- type: replace
+  path: /instance_groups/name=proxy/networks/name=default/name
+  value: private
+- type: replace
+  path: /instance_groups/name=bootstrap/networks/name=default/name
+  value: private
+- type: replace
+  path: /instance_groups/name=rejoin-unsafe/networks/name=default/name
+  value: private
+- type: replace
+  path: /instance_groups/name=verify-cluster-schemas/networks/name=default/name
+  value: private
+- type: replace
+  path: /instance_groups/name=smoke-tests/networks/name=default/name
+  value: private
+
+# VM sizez
+- type: replace
+  path: /instance_groups/name=mysql/vm_type
+  value: m3.medium
+- type: replace
+  path: /instance_groups/name=arbitrator/vm_type
+  value: m3.medium
+- type: replace
+  path: /instance_groups/name=proxy/vm_type
+  value: m3.medium
+- type: replace
+  path: /instance_groups/name=bootstrap/vm_type
+  value: m3.medium
+- type: replace
+  path: /instance_groups/name=rejoin-unsafe/vm_type
+  value: m3.medium
+- type: replace
+  path: /instance_groups/name=verify-cluster-schemas/vm_type
+  value: m3.medium
+- type: replace
+  path: /instance_groups/name=smoke-tests/vm_type
+  value: m3.medium
